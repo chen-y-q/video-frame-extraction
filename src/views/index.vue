@@ -52,8 +52,9 @@ const captureFrame = (file: any, time = 0) => {
       cvs.width = vdo.videoWidth;
       cvs.height = vdo.videoHeight;
       const ctx = cvs.getContext('2d');
+      if (!ctx) return;
       ctx.drawImage(vdo, 0, 0, cvs.width, cvs.height);
-      cvs.toBlob((blob) => {
+      cvs.toBlob((blob: any) => {
         const url = URL.createObjectURL(blob);
         resolve(url);
       });
