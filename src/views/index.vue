@@ -35,7 +35,7 @@ const inp = ref();
 const inp2 = ref();
 const file = ref();
 const num = ref(1);
-const imgList = ref([]);
+const imgList = ref<any>([]);
 const showImg = ref();
 // #endregion data-end
 
