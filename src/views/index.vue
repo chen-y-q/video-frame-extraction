@@ -40,39 +40,25 @@ const showImg = ref();
 // #endregion data-end
 
 // #region methods-start
-const captureFrame = (file: File, time = 0): Promise<string | undefined> => {
-  return new Promise((resolve, reject) => {
+const captureFrame = (file: any, time = 0) => {
+  return new Promise((resolve) => {
     const vdo = document.createElement('video');
-    const url = URL.createObjectURL(file);
-    vdo.src = url;
+    vdo.src = URL.createObjectURL(file);
     vdo.currentTime = time;
     vdo.muted = true;
     vdo.autoplay = true;
     vdo.oncanplay = () => {
       const cvs = document.createElement('canvas');
-      const ctx = cvs.getContext('2d');
-      if (!ctx) {
-        reject(new Error('Canvas context could not be created'));
-        return;
-      }
       cvs.width = vdo.videoWidth;
       cvs.height = vdo.videoHeight;
+      const ctx = cvs.getContext('2d');
+      if (!ctx) return resolve(null);
       ctx.drawImage(vdo, 0, 0, cvs.width, cvs.height);
-      cvs.toBlob((blob) => {
-        if (!blob) {
-          reject(new Error('Blob could not be created'));
-          return;
-        }
-        const imgUrl = URL.createObjectURL(blob);
-        resolve(imgUrl);
-      }, 'image/png'); // 明确指定图片格式
+      cvs.toBlob((blob: any) => {
+        const url = URL.createObjectURL(blob);
+        resolve(url);
+      });
     };
-    vdo.onerror = (error) => {
-      reject(new Error(`Video error: ${error.message}`));
-    };
-  }).finally(() => {
-    // 清理创建的 URL 对象
-    URL.revokeObjectURL(url);
   });
 };
 const inputChange = (e: any) => {
@@ -82,20 +68,13 @@ const input2Change = (e: any) => {
   num.value = e.target.value;
 };
 const startBtn = async () => {
-  try {
-    for (let i = 0; i < num.value; i++) {
-      const frame = await captureFrame(file.value, i);
-      if (!frame) {
-        console.error('Failed to capture frame at time', i);
-        continue; // 跳过当前帧，继续捕获后续帧
-      }
-      imgList.value.push(frame);
-      if (!showImg.value) {
-        showImg.value = imgList.value[0];
-      }
+  for (let i = 0; i < num.value; i++) {
+    const frame: any = await captureFrame(file.value, i);
+    if (!frame) return;
+    imgList.value.push(frame);
+    if (!showImg.value) {
+      showImg.value = imgList.value[0];
     }
-  } catch (error) {
-    console.error('Error during frame capture:', error);
   }
 };
 // #endregion methods-end
