@@ -36,7 +36,7 @@ const inp2 = ref();
 const file = ref();
 const num = ref(1);
 const imgList = ref([]);
-const showImg = ref('');
+const showImg = ref();
 // #endregion data-end
 
 // #region methods-start
@@ -72,6 +72,9 @@ const startBtn = async () => {
   for (let i = 0; i < num.value; i++) {
     const frame = await captureFrame(file.value, i);
     imgList.value.push(frame);
+    if (!showImg.value) {
+      showImg.value = imgList.value[0];
+    }
   }
 };
 const init = () => {};
