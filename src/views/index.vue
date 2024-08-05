@@ -40,7 +40,7 @@ const showImg = ref();
 // #endregion data-end
 
 // #region methods-start
-const captureFrame = (file, time = 0) => {
+const captureFrame = (file:any, time = 0) => {
   return new Promise((resolve) => {
     const vdo = document.createElement('video');
     vdo.src = URL.createObjectURL(file);
@@ -62,10 +62,10 @@ const captureFrame = (file, time = 0) => {
     };
   });
 };
-const inputChange = (e) => {
+const inputChange = (e:any) => {
   file.value = e.target.files[0];
 };
-const input2Change = (e) => {
+const input2Change = (e:any) => {
   num.value = e.target.value;
 };
 const startBtn = async () => {
@@ -77,7 +77,6 @@ const startBtn = async () => {
     }
   }
 };
-const init = () => {};
 // #endregion methods-end
 </script>
 
