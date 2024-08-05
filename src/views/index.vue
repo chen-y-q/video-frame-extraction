@@ -28,7 +28,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
 
 // #region data-start
 const inp = ref();
@@ -40,7 +40,7 @@ const showImg = ref();
 // #endregion data-end
 
 // #region methods-start
-const captureFrame = (file:any, time = 0) => {
+const captureFrame = (file: any, time = 0) => {
   return new Promise((resolve) => {
     const vdo = document.createElement('video');
     vdo.src = URL.createObjectURL(file);
@@ -55,17 +55,15 @@ const captureFrame = (file:any, time = 0) => {
       ctx.drawImage(vdo, 0, 0, cvs.width, cvs.height);
       cvs.toBlob((blob) => {
         const url = URL.createObjectURL(blob);
-        console.log(url);
-        console.log(blob);
         resolve(url);
       });
     };
   });
 };
-const inputChange = (e:any) => {
+const inputChange = (e: any) => {
   file.value = e.target.files[0];
 };
-const input2Change = (e:any) => {
+const input2Change = (e: any) => {
   num.value = e.target.value;
 };
 const startBtn = async () => {
