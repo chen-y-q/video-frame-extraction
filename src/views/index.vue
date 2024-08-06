@@ -13,15 +13,13 @@
       </el-input>
     </div>
     <div class="list">
-      <el-button
-        v-for="(i, index) in showLinkList"
-        :key="index"
-        @click="linkBtn(i.link, i.type)"
-      >
-        {{ i.name }}
-      </el-button>
+      <div class="item" v-for="(i, index) in showLinkList" :key="index">
+        <el-button @click="linkBtn(i.link, i.type)">
+          {{ i.name }}
+        </el-button>
+      </div>
     </div>
-    <particlesBox type="2"/>
+    <particlesBox type="3" />
   </div>
 </template>
 
@@ -119,18 +117,24 @@ onBeforeMount(() => {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 .search-box {
+  width: 1000px;
   margin-top: 20px;
 }
 .list {
   width: 100%;
+  max-width: 1200px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   margin-top: 20px;
   color: transparent;
+  .item {
+    margin: 5px;
+  }
 }
 </style>
