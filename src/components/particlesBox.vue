@@ -2,7 +2,6 @@
   <div class="bg-box">
     <vue-particles
       id="tsparticles"
-      @particles-loaded="particlesLoaded"
       :options="optionList[type]"
     />
   </div>
@@ -20,7 +19,7 @@ import {
 interface Props {
   type: string;
 }
-const props = withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<Props>(), {
   type: () => '1',
 });
 // #region data-start
