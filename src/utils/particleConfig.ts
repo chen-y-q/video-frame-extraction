@@ -1,4 +1,4 @@
-export const particlesOption = {
+export const particlesOption: any = {
     background: {
         color: {
             value: '#000000'
@@ -70,7 +70,7 @@ export const particlesOption = {
     detectRetina: true,
 }
 
-export const particlesOption2 =
+export const particlesOption2: any =
 {
     autoPlay: true,
     background: {
@@ -611,7 +611,7 @@ export const particlesOption2 =
     }
 }
 
-export const particlesOption3 = {
+export const particlesOption3: any = {
     "autoPlay": true,
     "background": {
         "color": {
@@ -1252,7 +1252,7 @@ export const particlesOption3 = {
     }
 }
 
-export const particlesOption4 = {
+export const particlesOption4: any = {
     "autoPlay": true,
     "background": {
         "color": {
