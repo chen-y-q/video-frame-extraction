@@ -7,7 +7,7 @@ const routes: Array<RouteRecordRaw> = [
         meta: {
             title: "首页",
         },
-        component: () => import("@/views/index.vue"),
+        component: () => import("../views/index.vue"),
     },
     {
         path: "/videoTools",
@@ -15,7 +15,7 @@ const routes: Array<RouteRecordRaw> = [
         meta: {
             title: "关于",
         },
-        component: () => import("@/views/videoTools.vue"),
+        component: () => import("../views/videoTools.vue"),
     },
 ];
 
