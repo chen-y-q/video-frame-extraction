@@ -1,179 +1,122 @@
 <template>
   <div class="index-box">
-    <div class="tyle-list"></div>
-    <div class="box">
-      <div class="check-file-btn btn" @click="checkBtn()">选择视频</div>
-      <input type="file" class="file-btn" ref="inp" @input="inputChange" />
-      <input
-        type="text"
-        class="num"
-        placeholder="请输入获取多少帧的图"
-        ref="inp2"
-        @input="input2Change"
-      />
-      <div class="start-btn btn" @click="startBtn()">Start</div>
-    </div>
-    <div class="show-img">
-      <img :src="showImg" alt="" />
-    </div>
-    <div class="img-list">
-      <div
-        class="item"
-        v-for="(i, index) in imgList"
-        :key="index"
-        @click="showImg = i"
+    <div class="search-box">
+      <el-input
+        v-model="searchValue"
+        style="max-width: 600px;"
+        placeholder="请输入工具名称"
+        class="input-with-select"
       >
-        <img :src="i" alt="" />
-      </div>
+        <template #append>
+          <el-button :icon="Search" @click="searchBtn()" />
+        </template>
+      </el-input>
+    </div>
+    <div class="list">
+      <el-button
+        v-for="(i, index) in showLinkList"
+        :key="index"
+        @click="linkBtn(i.link, i.type)"
+      >
+        {{ i.name }}
+      </el-button>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, reactive, onBeforeMount } from 'vue';
+import { Search } from '@element-plus/icons-vue';
+import { useRouter } from 'vue-router';
 
 // #region data-start
-const inp = ref();
-const inp2 = ref();
-const file = ref();
-const num = ref(1);
-const imgList = ref<any>([]);
-const showImg = ref();
+const router = useRouter();
+const linkList = ref([
+  {
+    name: 'element-plus文档',
+    link: 'https://element-plus.org/zh-CN/guide/design.html',
+
+    type: 'external',
+  },
+  {
+    name: 'Excel转JSON',
+    link: 'https://www.toolnb.com/tools/exceltojson.html',
+    type: 'external',
+  },
+  {
+    name: '二维码生成器',
+    link: 'https://www.toolnb.com/tools/qrcode.html',
+    type: 'external',
+  },
+  {
+    name: '视频抽帧',
+    link: '/videoTools',
+    type: 'local',
+  },
+  {
+    name: '壁纸',
+    link: 'https://wallhaven.cc',
+    type: 'external',
+  },
+  {
+    name: 'Vant4文档',
+    link: 'https://vant.pro/vant/#/zh-CN/quickstart',
+    type: 'external',
+  },
+  {
+    name: '签名插件(signature_pad)',
+    link: 'https://github.com/szimek/signature_pad',
+    type: 'external',
+  },
+  {
+    name: 'ScrollReveal文档',
+    link: 'https://scrollrevealjs.org/',
+    type: 'external',
+  },
+  {
+    name: 'LimeUI文档(uniapp插件)',
+    link: 'https://limeui.qcoon.cn/',
+    type: 'external',
+  },
+]);
+const showLinkList: any = ref();
+const searchValue = ref();
 // #endregion data-end
 
 // #region methods-start
-const captureFrame = (file: any, time = 0) => {
-  return new Promise((resolve) => {
-    const vdo = document.createElement('video');
-    vdo.src = URL.createObjectURL(file);
-    vdo.currentTime = time;
-    vdo.muted = true;
-    vdo.autoplay = true;
-    vdo.oncanplay = () => {
-      const cvs = document.createElement('canvas');
-      cvs.width = vdo.videoWidth;
-      cvs.height = vdo.videoHeight;
-      const ctx = cvs.getContext('2d');
-      if (!ctx) return resolve(null);
-      ctx.drawImage(vdo, 0, 0, cvs.width, cvs.height);
-      cvs.toBlob((blob: any) => {
-        const url = URL.createObjectURL(blob);
-        resolve(url);
-      });
-    };
-  });
-};
-const inputChange = (e: any) => {
-  file.value = e.target.files[0];
-};
-const input2Change = (e: any) => {
-  num.value = e.target.value;
-};
-const startBtn = async () => {
-  if(!file.value) return
-  for (let i = 0; i < num.value; i++) {
-    const frame: any = await captureFrame(file.value, i);
-    if (!frame) return;
-    imgList.value.push(frame);
-    if (!showImg.value) {
-      showImg.value = imgList.value[0];
-    }
+const linkBtn = (link: string, type: string) => {
+  if (type == 'external') {
+    window.open(link);
+  } else {
+    router.push({ path: link });
   }
 };
-const checkBtn = () => {
-  const clickEvent = new MouseEvent('click', {
-    view: window,
-    bubbles: true,
-    cancelable: true,
-  });
-
-  inp.value.dispatchEvent(clickEvent);
+const searchBtn = () => {
+  if (searchValue.value) {
+    showLinkList.value = linkList.value.filter((item) => {
+      return item.name.indexOf(searchValue.value) != -1;
+    });
+  } else {
+    showLinkList.value = linkList.value;
+  }
 };
 // #endregion methods-end
+
+onBeforeMount(() => {
+  showLinkList.value = linkList.value;
+});
 </script>
 
 <style lang="less" scoped>
-.index-box {
+.search-box {
+  margin-top: 20px;
+}
+.list {
   width: 100%;
-  height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  .btn {
-    height: 40px;
-    border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: inherit;
-    cursor: pointer;
-    transition: border-color 0.25s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    &:hover {
-      border-color: #646cff;
-    }
-    &:focus,
-    &:focus-visible {
-      outline: 4px auto -webkit-focus-ring-color;
-    }
-  }
-  .box {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .num {
-      width: 200px;
-      height: 40px;
-      border: 1px solid #ccc;
-      outline-style: none;
-      padding-left: 10px;
-      border-radius: 6px;
-    }
-  }
-  .file-btn {
-    display: none;
-  }
-  .check-file-btn {
-    width: 120px;
-    height: 40px;
-    border: 1px solid #000;
-    
-    border-radius: 6px;
-    margin-right: 5px;
-  }
-  .start-btn{
-    border: 1px solid #000;
-    margin-left: 5px;
-  }
-}
-.show-img {
-  width: 60%;
-  img {
-    width: 100%;
-    height: auto;
-  }
-}
-.img-list {
-  display: flex;
-  width: 70%;
-  height: 200px;
-  overflow: auto hidden;
-  .item {
-    flex-shrink: 0;
-    width: 300px;
-    height: 100%;
-    margin: 0 2px;
-    cursor: pointer;
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 </style>

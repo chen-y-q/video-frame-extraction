@@ -1,7 +1,5 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 
-const home = () => import("../views/index.vue");
-
 const routes: Array<RouteRecordRaw> = [
     {
         path: "/",
@@ -9,9 +7,16 @@ const routes: Array<RouteRecordRaw> = [
         meta: {
             title: "首页",
         },
-        component: home,
+        component: () => import("@/views/index.vue"),
     },
-
+    {
+        path: "/videoTools",
+        name: "videoTools",
+        meta: {
+            title: "关于",
+        },
+        component: () => import("@/views/videoTools.vue"),
+    },
 ];
 
 const router = createRouter({
