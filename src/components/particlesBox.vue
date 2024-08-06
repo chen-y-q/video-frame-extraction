@@ -23,7 +23,7 @@ withDefaults(defineProps<Props>(), {
   type: () => '1',
 });
 // #region data-start
-const optionList = reactive({
+const optionList = reactive<any>({
   1: particlesOption,
   2: particlesOption2,
   3: particlesOption3,
