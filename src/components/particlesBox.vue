@@ -9,15 +9,13 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, ref } from 'vue';
+import { reactive } from 'vue';
 import {
   particlesOption,
   particlesOption2,
   particlesOption3,
   particlesOption4,
 } from '../utils/particleConfig';
-import Particles from '@tsparticles/vue3';
-import { loadFull } from 'tsparticles';
 
 interface Props {
   type: string;
@@ -35,9 +33,9 @@ const optionList = reactive({
 // #endregion data-end
 
 // #region methods-start
-const particlesLoaded = async (container: any) => {
-  console.log('Particles container loaded', container);
-};
+// const particlesLoaded = async (container: any) => {
+//   console.log('Particles container loaded', container);
+// };
 // #endregion methods-end
 </script>
 
