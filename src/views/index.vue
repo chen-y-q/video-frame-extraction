@@ -21,6 +21,7 @@
         {{ i.name }}
       </el-button>
     </div>
+    <particlesBox type="2"/>
   </div>
 </template>
 
@@ -78,6 +79,11 @@ const linkList = ref([
     link: 'https://limeui.qcoon.cn/',
     type: 'external',
   },
+  {
+    name: '粒子动画插件(particles.js)',
+    link: 'https://particles.js.org/',
+    type: 'external',
+  },
 ]);
 const showLinkList: any = ref();
 const searchValue = ref();
@@ -108,6 +114,13 @@ onBeforeMount(() => {
 </script>
 
 <style lang="less" scoped>
+.index-box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
 .search-box {
   margin-top: 20px;
 }
@@ -118,5 +131,6 @@ onBeforeMount(() => {
   align-items: center;
   flex-wrap: wrap;
   margin-top: 20px;
+  color: transparent;
 }
 </style>
