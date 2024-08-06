@@ -25,7 +25,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive, onBeforeMount } from 'vue';
+import { ref, onBeforeMount } from 'vue';
 import { Search } from '@element-plus/icons-vue';
 import { useRouter } from 'vue-router';
 

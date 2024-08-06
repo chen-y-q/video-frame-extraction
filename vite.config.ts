@@ -19,8 +19,6 @@ export default defineConfig({
     //设置别名
     alias: {
       '@': '/src',
-      '@components': '/src/components',
-      '@utils': '/src/utils',
     }
   }
 })
