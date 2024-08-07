@@ -12,6 +12,7 @@ import {
   particlesOption3,
   particlesOption4,
   particlesOption5,
+  particlesOption6
 } from '../utils/particleConfig';
 
 interface Props {
@@ -27,6 +28,7 @@ const optionList = reactive<any>({
   3: particlesOption3,
   4: particlesOption4,
   5: particlesOption5,
+  6: particlesOption6
 });
 // #endregion data-end
 

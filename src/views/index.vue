@@ -19,7 +19,7 @@
         </el-button>
       </div>
     </div>
-    <particlesBox :type="randomNumber" />
+    <particlesBox :type="2" />
   </div>
 </template>
 
@@ -80,6 +80,11 @@ const linkList = ref([
   {
     name: '粒子动画插件(particles.js)',
     link: 'https://particles.js.org/',
+    type: 'external',
+  },
+  {
+    name: '多功能导航',
+    link: 'https://tuostudy.upnb.top/',
     type: 'external',
   },
 ]);

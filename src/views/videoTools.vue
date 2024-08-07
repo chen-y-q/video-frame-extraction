@@ -3,15 +3,24 @@
     <div class="tyle-list"></div>
     <div class="box">
       <div class="check-file-btn btn" @click="checkBtn()">选择视频</div>
-      <input type="file" accept="video/*" class="file-btn" ref="inp" @input="inputChange" />
+      <input
+        type="file"
+        accept="video/*"
+        class="file-btn"
+        ref="inp"
+        @input="inputChange"
+      />
       <input
         type="text"
         class="num"
         placeholder="请输入获取多少帧的图"
         ref="inp2"
-        @input="input2Change"
+        v-model="num"
       />
       <div class="start-btn btn" @click="startBtn()">Start</div>
+    </div>
+    <div class="vdo-box" v-show="false">
+      <video controls ref="vdo"></video>
     </div>
     <div class="show-img">
       <img :src="showImg" alt="" />
@@ -30,15 +39,18 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed, ref, nextTick } from 'vue';
 
 // #region data-start
 const inp = ref();
 const inp2 = ref();
 const file = ref();
-const num = ref(1);
+const num = ref(null);
 const imgList = ref<any>([]);
 const showImg = ref();
+const isLoading = ref(false);
+const vdo = ref();
+const videoDuration = ref(0);
 // #endregion data-end
 
 // #region methods-start
@@ -64,13 +76,39 @@ const captureFrame = (file: any, time = 0) => {
   });
 };
 const inputChange = (e: any) => {
-  file.value = e.target.files[0];
+  file.value = e.target.files?.[0];
+  if (file.value && file.value.type.match('video.*')) {
+    showImg.value = '';
+    imgList.value = [];
+    if (vdo.value) {
+      vdo.value.removeEventListener('loadedmetadata', handleMetadata);
+      vdo.value.src = URL.createObjectURL(file.value);
+      vdo.value.addEventListener('loadedmetadata', handleMetadata);
+      vdo.value.load();
+    }
+  }
 };
-const input2Change = (e: any) => {
-  num.value = e.target.value;
+const handleMetadata = () => {
+  if (vdo.value) {
+    videoDuration.value = vdo.value.duration;
+    num.value = videoDuration.value;
+  }
 };
 const startBtn = async () => {
-  if(!file.value) return
+  if (!file.value)
+    return ElMessage({
+      showClose: true,
+      message: '请选择视频',
+      type: 'warning',
+    });
+  if (!num.value)
+    return ElMessage({
+      showClose: true,
+      message: '请输入数字',
+      type: 'warning',
+    });
+  if (isLoading.value) return;
+  isLoading.value = true;
   for (let i = 0; i < num.value; i++) {
     const frame: any = await captureFrame(file.value, i);
     if (!frame) return;
@@ -79,6 +117,7 @@ const startBtn = async () => {
       showImg.value = imgList.value[0];
     }
   }
+  isLoading.value = false;
 };
 const checkBtn = () => {
   const clickEvent = new MouseEvent('click', {
@@ -136,6 +175,14 @@ const checkBtn = () => {
       border-radius: 6px;
     }
   }
+  .vdo-box {
+    width: 800px;
+    height: 600px;
+    video {
+      width: 100%;
+      height: auto;
+    }
+  }
   .file-btn {
     display: none;
   }
@@ -143,11 +190,11 @@ const checkBtn = () => {
     width: 120px;
     height: 40px;
     border: 1px solid #000;
-    
+
     border-radius: 6px;
     margin-right: 5px;
   }
-  .start-btn{
+  .start-btn {
     border: 1px solid #000;
     margin-left: 5px;
   }
