@@ -19,7 +19,7 @@
         </el-button>
       </div>
     </div>
-    <particlesBox :type="2" />
+    <particlesBox :type="randomNumber" />
   </div>
 </template>
 

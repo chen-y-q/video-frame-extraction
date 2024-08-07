@@ -39,13 +39,14 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, nextTick } from 'vue';
+import { ref } from 'vue';
+import { ElMessage } from 'element-plus';
 
 // #region data-start
 const inp = ref();
 const inp2 = ref();
 const file = ref();
-const num = ref(null);
+const num = ref<any>(null);
 const imgList = ref<any>([]);
 const showImg = ref();
 const isLoading = ref(false);
