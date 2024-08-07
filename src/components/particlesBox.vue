@@ -1,9 +1,6 @@
 <template>
   <div class="bg-box">
-    <vue-particles
-      id="tsparticles"
-      :options="optionList[type]"
-    />
+    <vue-particles id="tsparticles" :options="optionList[type]" />
   </div>
 </template>
 
@@ -14,13 +11,15 @@ import {
   particlesOption2,
   particlesOption3,
   particlesOption4,
+  particlesOption5,
+  particlesOption6,
 } from '../utils/particleConfig';
 
 interface Props {
-  type: string;
+  type: string | number;
 }
 withDefaults(defineProps<Props>(), {
-  type: () => '1',
+  type: () => 1,
 });
 // #region data-start
 const optionList = reactive<any>({
@@ -28,6 +27,8 @@ const optionList = reactive<any>({
   2: particlesOption2,
   3: particlesOption3,
   4: particlesOption4,
+  5: particlesOption5,
+  6: particlesOption6,
 });
 // #endregion data-end
 

@@ -19,12 +19,12 @@
         </el-button>
       </div>
     </div>
-    <particlesBox type="3" />
+    <particlesBox :type="randomNumber" />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onBeforeMount } from 'vue';
+import { ref, onBeforeMount, computed } from 'vue';
 import { Search } from '@element-plus/icons-vue';
 import { useRouter } from 'vue-router';
 
@@ -85,6 +85,9 @@ const linkList = ref([
 ]);
 const showLinkList: any = ref();
 const searchValue = ref();
+const randomNumber = computed(() => {
+  return Math.floor(Math.random() * 5) + 1;
+});
 // #endregion data-end
 
 // #region methods-start
