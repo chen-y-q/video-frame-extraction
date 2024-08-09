@@ -43,9 +43,7 @@ jobs:
       - run: npm install
       - name: Build
         continue-on-error: true
-        run: |
-          npm run build || true
-          npm run deploy
+        run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

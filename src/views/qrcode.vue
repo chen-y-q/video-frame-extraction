@@ -56,6 +56,12 @@
               </el-select>
             </div>
           </div>
+          <div class="item">
+            <div class="tit">边距</div>
+            <div class="inp-box">
+              <el-input type="text" v-model="codeMargin"></el-input>
+            </div>
+          </div>
         </div>
       </div>
       <div class="rh-box">
@@ -65,8 +71,8 @@
         </div>
       </div>
     </div>
-    <div class="create-btn" @click="createdBtn()">
-      <el-button type="primary">生成</el-button>
+    <div class="create-btn">
+      <el-button type="primary" @click="createdBtn()">生成</el-button>
     </div>
   </div>
 </template>
@@ -83,6 +89,7 @@ const codeColor = ref<string>('#000000');
 const codeBgColor = ref<string>('#ffffff');
 const colorVal = ref<string>('ff');
 const bgColorVal = ref<string>('ff');
+const codeMargin = ref<string | number>(0);
 const transparentOption = ref<any>([
   {
     value: 'ff',
@@ -113,6 +120,7 @@ const transparentOption = ref<any>([
     label: '100%透明',
   },
 ]);
+const isLoading = ref<boolean>(false);
 // #endregion data-end
 
 // #region methods-start
@@ -121,7 +129,7 @@ const createdQrcode = () => {
     const options: any = {
       width: Number(codeSize.value),
       height: Number(codeSize.value),
-      margin: 0,
+      margin: codeMargin.value,
       errorCorrectionLevel: 'H', // 纠错级别L, M, Q, H
       scale: 1,
       color: {
@@ -137,6 +145,7 @@ const createdQrcode = () => {
   });
 };
 const createdBtn = async () => {
+  if (isLoading.value) return;
   if (!codeTxt.value) {
     ElMessage({
       showClose: true,
@@ -145,7 +154,9 @@ const createdBtn = async () => {
     });
     return;
   }
+  isLoading.value = true;
   await createdQrcode();
+  isLoading.value = false;
 };
 // #endregion methods-end
 </script>
