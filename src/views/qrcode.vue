@@ -118,7 +118,7 @@ const transparentOption = ref<any>([
 // #region methods-start
 const createdQrcode = () => {
   return new Promise((resolve) => {
-    const options = {
+    const options: any = {
       width: Number(codeSize.value),
       height: Number(codeSize.value),
       margin: 0,
@@ -129,7 +129,7 @@ const createdQrcode = () => {
         light: codeBgColor.value + bgColorVal.value, // 背景颜色
       },
     };
-    QRCode.toDataURL(codeTxt.value, options, (err, url) => {
+    QRCode.toDataURL(null, codeTxt.value, options, (err, url) => {
       if (err) console.error(err);
       codeImg.value = url;
       resolve(true);
