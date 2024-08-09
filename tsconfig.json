@@ -33,6 +33,12 @@
       "jquery": ["node_modules/jquery/dist/jquery"],
       "@/views/*": ["./src/views/*"]
     },
-    "lib": ["dom", "es2015", "es2015.promise"]
+    "lib": ["dom", "es2015", "es2015.promise"],
+    "include": [
+      "src/**/*.ts",
+      "src/**/*.d.ts",
+      "src/**/*.tsx",
+      "src/**/*.vue"
+    ],
   }
 }

@@ -117,7 +117,7 @@ const transparentOption = ref<any>([
 
 // #region methods-start
 const createdQrcode = () => {
-  return new Promise((resolve, rejects) => {
+  return new Promise((resolve) => {
     const options = {
       width: Number(codeSize.value),
       height: Number(codeSize.value),
