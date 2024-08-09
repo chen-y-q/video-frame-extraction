@@ -7,7 +7,7 @@ const routes: Array<RouteRecordRaw> = [
         meta: {
             title: "首页",
         },
-        component: () => import("../views/index.vue"),
+        component: () => import("@/views/index.vue"),
     },
     {
         path: "/videoTools",
@@ -15,7 +15,7 @@ const routes: Array<RouteRecordRaw> = [
         meta: {
             title: "视频抽帧",
         },
-        component: () => import("../views/videoTools.vue"),
+        component: () => import("@/views/videoTools.vue"),
     },
     {
         path: '/qrcode',
@@ -23,7 +23,15 @@ const routes: Array<RouteRecordRaw> = [
         meta: {
             title: '二维码生成器'
         },
-        component: () => import('../views/qrcode.vue'),
+        component: () => import('@/views/qrcode.vue'),
+    },
+    {
+        path: '/excelTojson',
+        name: 'excelTojson',
+        meta: {
+            title: '二维码生成器'
+        },
+        component: () => import('@/views/excelTojson.vue'),
     }
 ];
 

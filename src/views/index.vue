@@ -92,6 +92,11 @@ const linkList = ref([
     link: '/qrcode',
     type: 'local',
   },
+  {
+    name: 'Excel转JSON(本地)',
+    link: '/excelTojson',
+    type: 'local',
+  },
 ]);
 const showLinkList: any = ref();
 const searchValue = ref();

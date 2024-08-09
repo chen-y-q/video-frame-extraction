@@ -29,8 +29,8 @@
     // 解析非相对模块名的基准目录
     "baseUrl": "./",
     "paths": {
-      "jquery": ["node_modules/jquery/dist/jquery"],
-      "@/views/*": ["./src/views/*"]
+      "@": ["src"],
+      "@/*": ["src/*"]
     },
     "lib": ["dom", "es2015", "es2015.promise"]
   },

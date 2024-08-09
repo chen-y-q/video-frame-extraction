@@ -12,14 +12,18 @@
     "@tsparticles/configs": "^3.5.0",
     "@tsparticles/vue3": "^3.0.1",
     "element-plus": "^2.7.8",
+    "file-saver": "^2.0.5",
     "less": "^4.2.0",
     "pinia": "^2.2.0",
     "qrcode": "^1.5.4",
     "tsparticles": "^3.5.0",
     "vue": "^3.4.31",
-    "vue-router": "^4.4.2"
+    "vue-router": "^4.4.2",
+    "vue3-infinite-list": "^0.2.5",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
+    "@types/file-saver": "^2.0.7",
     "@types/qrcode": "^1.5.5",
     "@vitejs/plugin-vue": "^5.0.5",
     "typescript": "^5.2.2",
