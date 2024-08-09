@@ -40,7 +40,6 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { ElMessage } from 'element-plus';
 
 // #region data-start
 const inp = ref();

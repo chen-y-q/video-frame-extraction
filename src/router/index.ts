@@ -13,10 +13,18 @@ const routes: Array<RouteRecordRaw> = [
         path: "/videoTools",
         name: "videoTools",
         meta: {
-            title: "关于",
+            title: "视频抽帧",
         },
         component: () => import("../views/videoTools.vue"),
     },
+    {
+        path: '/qrcode',
+        name: 'qrcode',
+        meta: {
+            title: '二维码生成器'
+        },
+        component: () => import('../views/qrcode.vue'),
+    }
 ];
 
 const router = createRouter({

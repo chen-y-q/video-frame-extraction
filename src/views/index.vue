@@ -87,6 +87,11 @@ const linkList = ref([
     link: 'https://tuostudy.upnb.top/',
     type: 'external',
   },
+  {
+    name: '二维码生成器(本地)',
+    link: '/qrcode',
+    type: 'local',
+  },
 ]);
 const showLinkList: any = ref();
 const searchValue = ref();
