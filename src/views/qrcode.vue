@@ -129,14 +129,14 @@ const createdQrcode = () => {
         light: codeBgColor.value + bgColorVal.value, // 背景颜色
       },
     };
-    QRCode.toDataURL(codeTxt.value, options, (err: any, url: string) => {
+    QRCode.toDataURL(codeTxt.value, options, (err, url) => {
       if (err) console.error(err);
       codeImg.value = url;
       resolve(true);
     });
   });
 };
-const createdBtn = async() => {
+const createdBtn = async () => {
   if (!codeTxt.value) {
     ElMessage({
       showClose: true,
@@ -145,7 +145,7 @@ const createdBtn = async() => {
     });
     return;
   }
-  await createdQrcode()
+  await createdQrcode();
 };
 // #endregion methods-end
 </script>

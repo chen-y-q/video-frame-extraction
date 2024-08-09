@@ -24,7 +24,6 @@
     "importHelpers": true, // 从 tslib 导入外部帮助库: 比如__extends，__rest等
     "listFiles": true, // 编译过程中打印文件名
     "removeComments": true, // 移除注释
-    "suppressImplicitAnyIndexErrors": true,
     // 允许编译javascript文件
     "allowJs": true,
     // 解析非相对模块名的基准目录
@@ -33,12 +32,7 @@
       "jquery": ["node_modules/jquery/dist/jquery"],
       "@/views/*": ["./src/views/*"]
     },
-    "lib": ["dom", "es2015", "es2015.promise"],
-    "include": [
-      "src/**/*.ts",
-      "src/**/*.d.ts",
-      "src/**/*.tsx",
-      "src/**/*.vue"
-    ],
-  }
+    "lib": ["dom", "es2015", "es2015.promise"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
