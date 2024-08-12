@@ -17,7 +17,6 @@
         :on-change="handleChange"
         :accept="isToJson ? ['.xlxs', '.xlsx'].join(',') : '.json'"
         :on-remove="handleRemove"
-        :before-upload="beforeUpload"
         ref="upload"
       >
         <el-icon class="el-icon--upload"><upload-filled /></el-icon>
@@ -119,8 +118,6 @@ const handleExceed: UploadProps['onExceed'] = (files) => {
   upload.value!.handleStart(file);
 };
 const handleChange = (fileData: UploadRequestOptions | any) => {
-  console.log(fileData, '999');
-
   try {
     const data = fileData.raw;
     if (isToJson.value) {
@@ -135,9 +132,7 @@ const handleChange = (fileData: UploadRequestOptions | any) => {
 const handleRemove = (file) => {
   jsonData.value = null;
 };
-const beforeUpload = (file) => {
-  console.log(file);
-};
+
 const downloadXlsx = (data: any) => {
   const headers = new Set();
   // 从组件的数据属性获取数据
