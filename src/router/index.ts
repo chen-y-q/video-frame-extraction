@@ -29,10 +29,10 @@ const routes: Array<RouteRecordRaw> = [
         path: '/excelTojson',
         name: 'excelTojson',
         meta: {
-            title: '二维码生成器'
+            title: 'excel转json'
         },
         component: () => import('@/views/excelTojson.vue'),
-    }
+    },
 ];
 
 const router = createRouter({
