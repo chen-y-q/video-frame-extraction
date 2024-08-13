@@ -1,10 +1,9 @@
 <template>
-  <el-radio-group v-model="isToJson" style="margin: 20px 20px 0;">
-    <el-radio-button :value="true">Excel转json </el-radio-button>
-    <el-radio-button :value="false">Json转Excel </el-radio-button>
-  </el-radio-group>
   <div class="to-json-box">
-    <!-- <div class="title">Excel转json</div> -->
+    <el-radio-group v-model="isToJson" style="margin: 20px 20px 0;">
+      <el-radio-button :value="true">Excel转json </el-radio-button>
+      <el-radio-button :value="false">Json转Excel </el-radio-button>
+    </el-radio-group>
     <div class="upload-box">
       <el-upload
         class="upload-demo"
@@ -90,16 +89,25 @@ const convertExcelToJSON = (file: any) => {
   reader.onload = async (e: ProgressEvent<FileReader>) => {
     const data = e.target?.result as ArrayBuffer;
     if (data) {
-      const workbook = XLSX.read(data, { type: 'array' });
+      const workbook = XLSX.read(data, {
+        type: 'array',
+        cellDates: true,
+        raw: true,
+        dateNF: 'yyyy-mm-dd',
+      });
+
       const firstSheetName = workbook.SheetNames[0];
       const worksheet = workbook.Sheets[firstSheetName];
-      const json = XLSX.utils.sheet_to_json(worksheet);
+      const json = XLSX.utils.sheet_to_json(worksheet, {
+        raw: false,
+      });
       // 使用 json 更新组件状态或进行其他处理
       jsonData.value = json;
     }
   };
   reader.readAsArrayBuffer(file);
 };
+
 const saveJsonFile = () => {
   if (!jsonData.value) return;
   if (isToJson.value) {
