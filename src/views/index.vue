@@ -1,5 +1,6 @@
 <template>
   <div class="index-box">
+    <div id="clock" class="clock">{{ time }}</div>
     <div class="search-box">
       <el-input
         v-model="searchValue"
@@ -97,13 +98,13 @@ const linkList = ref([
     link: '/excelTojson',
     type: 'local',
   },
-   
 ]);
 const showLinkList: any = ref();
 const searchValue = ref();
 const randomNumber = computed(() => {
   return Math.floor(Math.random() * 5) + 1;
 });
+const time = ref();
 // #endregion data-end
 
 // #region methods-start
@@ -123,10 +124,36 @@ const searchBtn = () => {
     showLinkList.value = linkList.value;
   }
 };
+const updateClock = () => {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = now.getMonth() + 1;
+  const day = now.getDate();
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const seconds = String(now.getSeconds()).padStart(2, '0');
+
+  const timeString = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+  time.value = timeString;
+  // document.getElementById('clock').textContent = timeString;
+
+  // 更新毫秒（可选）
+  // const milliseconds = String(now.getMilliseconds()).padStart(3, '0');
+  // document.getElementById('clock').textContent += `.${milliseconds}`;
+};
+
+const timeInit = () => {
+  // 每秒更新时钟
+  setInterval(updateClock, 1000);
+  // 初始化时钟
+  updateClock();
+};
+
 // #endregion methods-end
 
 onBeforeMount(() => {
   showLinkList.value = linkList.value;
+  timeInit();
 });
 </script>
 
@@ -138,6 +165,11 @@ onBeforeMount(() => {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+.clock {
+  font-size: 50px;
+  color: #fff;
+  user-select: none;
 }
 .search-box {
   width: 1000px;
