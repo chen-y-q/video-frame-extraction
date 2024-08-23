@@ -6,6 +6,7 @@
         style="max-width: 600px;"
         placeholder="请输入题目"
         class="input-with-select"
+        clearable
       >
         <template #append>
           <el-button :icon="Search" @click="searchBtn()" />
@@ -750,4 +751,8 @@ const searchBtn = () => {
 // #endregion methods-end
 </script>
 
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.box{
+    padding-top: 20px;
+}
+</style>
