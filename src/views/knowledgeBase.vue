@@ -14,23 +14,28 @@
       </el-input>
     </div>
     <div class="show-box">
-      <div class="item" v-for="(i, index) in showData" :key="index">
-        <div class="t-a">
-          <div class="t">{{ i.topic }}</div>
-          <div class="a"><span>答案：</span>{{ i.answer }}</div>
-        </div>
-        <div class="a-list" v-if="i.type != 'determine'">
-          <div
-            class="a-i"
-            v-for="(subI, subIndex) in i.answer_arr"
-            :key="subIndex"
-            :class="{
-              active: isOn(subI, i.answer, subIndex),
-            }"
-          >
-            {{ subI }}
+      <template v-if="showData.length">
+        <div class="item" v-for="(i, index) in showData" :key="index">
+          <div class="t-a">
+            <div class="t">{{ i.topic }}</div>
+            <div class="a"><span>答案：</span>{{ i.answer }}</div>
+          </div>
+          <div class="a-list" v-if="i.type != 'determine'">
+            <div
+              class="a-i"
+              v-for="(subI, subIndex) in i.answer_arr"
+              :key="subIndex"
+              :class="{
+                active: isOn(subI, i.answer, subIndex),
+              }"
+            >
+              {{ subI }}
+            </div>
           </div>
         </div>
+      </template>
+      <div class="item" v-if="showData.length == 0">
+        题目暂无收录
       </div>
     </div>
   </div>
@@ -1140,7 +1145,7 @@ const data = ref([
     type: 'radio',
   },
 ]);
-const showData = ref();
+const showData = ref([]);
 const searchValue = ref();
 // #endregion data-end
 
@@ -1150,10 +1155,12 @@ const searchBtn = () => {
     let filterData = data.value.filter((item) => {
       return item.topic.indexOf(searchValue.value) != -1;
     });
-    showData.value = [filterData[0]];
+    if (filterData.length > 1) showData.value = [filterData[0]];
+    if (filterData.length == 0) showData.value = [];
   } else {
     showData.value = data.value;
   }
+  searchValue.value = '';
 };
 const isOn = (sunI: any, answer: any, index: any) => {
   return sunI.indexOf(answer.split('')[index]) != -1;
