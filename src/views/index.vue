@@ -89,6 +89,16 @@ const linkList = ref([
     type: 'external',
   },
   {
+    name: 'day.js文档',
+    link: 'https://day.js.org/docs/zh-CN/installation/installation',
+    type: 'external',
+  },
+  {
+    name: 'html2canvas文档',
+    link: 'https://html2canvas.hertzen.com/',
+    type: 'external',
+  },
+  {
     name: '二维码生成器(本地)',
     link: '/qrcode',
     type: 'local',
@@ -96,6 +106,11 @@ const linkList = ref([
   {
     name: 'Excel和JSON的转换(本地)',
     link: '/excelTojson',
+    type: 'local',
+  },
+  {
+    name: '个人考证工具',
+    link: '/knowledgeBase',
     type: 'local',
   },
 ]);

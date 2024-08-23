@@ -33,6 +33,14 @@ const routes: Array<RouteRecordRaw> = [
         },
         component: () => import('@/views/excelTojson.vue'),
     },
+    {
+        path: '/knowledgeBase',
+        name: 'knowledgeBase',
+        meta: {
+            title: 'excel转json'
+        },
+        component: () => import('@/views/knowledgeBase.vue'),
+    },
 ];
 
 const router = createRouter({
