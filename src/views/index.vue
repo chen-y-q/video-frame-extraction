@@ -108,11 +108,11 @@ const linkList = ref([
     link: '/excelTojson',
     type: 'local',
   },
-  {
-    name: '个人考证工具',
-    link: '/knowledgeBase',
-    type: 'local',
-  },
+  // {
+  //   name: '个人考证工具',
+  //   link: '/knowledgeBase',
+  //   type: 'local',
+  // },
 ]);
 const showLinkList: any = ref();
 const searchValue = ref();
