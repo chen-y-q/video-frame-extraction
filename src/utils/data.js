@@ -1136,32 +1136,7 @@ export const dataJson = [
     answer_arr: [],
     type: 'determine',
   },
-  {
-    topic: '在SQL数据集输入SQL后，在数据库执行的SQL与我们输入的是一致的 ',
-    answer: '正确',
-    answer_arr: [],
-    type: 'determine',
-  },
-  {
-    topic:
-      '创建关系数据源后，必须在关系数据源下创建表关系视图，不然无法正常创建查询取数。',
-    answer: '正确',
-    answer_arr: [],
-    type: 'determine',
-  },
-  {
-    topic:
-      '[color=#34495e]拖拽式数据集包括即席查询数据集和透视分析数据集，主要面向不懂代码的业务人员，通过点击/拖放的方式完成明细数据或汇总数据准备，成为可用的制作报表的“原材料”[/color]',
-    answer: '错误',
-    answer_arr: [],
-    type: 'determine',
-  },
-  {
-    topic: '电子表格报表的数据来源有很多种途径，但不能直接基于数据源创建。',
-    answer: '正确',
-    answer_arr: [],
-    type: 'determine',
-  },
+
   {
     topic: '电子表格支持制作上下分片报表，但不支持制作左右分片报表。 ',
     answer: '正确',
@@ -1223,12 +1198,7 @@ export const dataJson = [
     answer_arr: [],
     type: 'determine',
   },
-  {
-    topic: '业务主题可以对表字段进行自由组合，分级分层，更加便于查询拖拽',
-    answer: '错误',
-    answer_arr: [],
-    type: 'determine',
-  },
+
   {
     topic: '电子表格支持使用数据填报的功能，将文件上传到数据库中。',
     answer: '错误',
@@ -1281,18 +1251,7 @@ export const dataJson = [
     answer_arr: [],
     type: 'determine',
   },
-  {
-    topic:
-      '电子表格中为了让标题行在分页之后的每一页都还可以继续显示，通常的做法是？',
-    answer: 'A',
-    answer_arr: [
-      'A. 设置冻结窗格',
-      'B. 设置单元格属性',
-      'C. 设置打印标题',
-      'D. 设置条件格式',
-    ],
-    type: 'radio',
-  },
+
   {
     topic:
       '[color=#34495e][font="]拖拽式数据集中哪一个数据集是用来满足[/font][/color][color=#34495e][font="]在业务中明细数据的查询需要？[/font][/color]',
@@ -1305,19 +1264,7 @@ export const dataJson = [
     ],
     type: 'radio',
   },
-  {
-    topic:
-      '某用户想要使用电子表格实现清单明细报表展现，并且数据量非常大，推荐此用户使用什么类型报表进行实现？',
-    answer: 'A',
-    answer_arr: ['A. 分组表', 'B. 清单表', 'C. 列表报表', 'D. Excel融合分析'],
-    type: 'radio',
-  },
-  {
-    topic: '以下哪个数据库不是关系数据库可以直接选择连接的？',
-    answer: 'A',
-    answer_arr: ['A. MySQL', 'B. MS SQL SERVER', 'C. Oracle', 'D. Tinysoft'],
-    type: 'radio',
-  },
+
   {
     topic:
       '销售在使用该报表进行填报时，修改了数据并且进行了保存，但是一刷新发现数据还是原来的，并没有修改成功，原因是什么？',
@@ -1361,12 +1308,7 @@ export const dataJson = [
     ],
     type: 'radio',
   },
-  {
-    topic: '电子表格的计算公式支持以下哪种计算？',
-    answer: 'AB',
-    answer_arr: ['A. 占比', 'B. 同期值', 'C. 环比', 'D. 排名'],
-    type: 'radio',
-  },
+
   {
     topic: '设置回写规则时，能够选择的回写内容类型有哪些？',
     answer: 'AB',
@@ -1403,13 +1345,7 @@ export const dataJson = [
     answer_arr: [],
     type: 'determine',
   },
-  {
-    topic:
-      '创建关系数据源后，必须在关系数据源下创建表关系视图，不然无法正常创建查询取数。',
-    answer: '错误',
-    answer_arr: [],
-    type: 'determine',
-  },
+
   {
     topic: '电子表格中的数据设置包含3种，分别为分组、列表以及汇总。',
     answer: '正确',
@@ -1738,12 +1674,7 @@ export const dataJson = [
     answer_arr: [],
     type: 'determine',
   },
-  {
-    topic: '在SQL数据集输入SQL后，在数据库执行的SQL与我们输入的是一致的 ',
-    answer: '错误',
-    answer_arr: [],
-    type: 'determine',
-  },
+
   {
     topic: '业务主题我们可以看作是 Smartbi 产品中的数据仓库 ',
     answer: '正确',
@@ -1806,12 +1737,7 @@ export const dataJson = [
     answer_arr: [],
     type: 'determine',
   },
-  {
-    topic: '电子表格报表的数据来源有很多种途径，但不能直接基于数据源创建。',
-    answer: '错误',
-    answer_arr: [],
-    type: 'determine',
-  },
+
   {
     topic:
       '关系数据源不允许修改schema名称，主要是修改了会影响数据库本身的数据结构。',
@@ -1891,12 +1817,7 @@ export const dataJson = [
     answer_arr: [],
     type: 'determine',
   },
-  {
-    topic: '以下哪个不属于电子表格单元格属性中的扩展方向？ ',
-    answer: 'C',
-    answer_arr: ['A. 从上到下', 'B. 从左到右', 'C. 扩展', 'D. 不扩展'],
-    type: 'radio',
-  },
+
   {
     topic: '以下关于关系数据库的计算字段描述错误的是 ',
     answer: 'D',
@@ -2038,13 +1959,7 @@ export const dataJson = [
     ],
     type: 'radio',
   },
-  {
-    topic:
-      '某用户想要使用电子表格实现清单明细报表展现，并且数据量非常大，推荐此用户使用什么类型报表进行实现？',
-    answer: 'B',
-    answer_arr: ['A. 分组表', 'B. 清单表', 'C. 列表报表', 'D. Excel融合分析'],
-    type: 'radio',
-  },
+
   {
     topic:
       '关系数据源的表关系视图中存在多个快捷操作按钮，以便于我们快速进行表关系设置，以下哪个不属于表关系视图中的操作按钮？',
@@ -2382,12 +2297,7 @@ export const dataJson = [
     answer_arr: ['A. 跳转规则', 'B. 条件格式', 'C. 传值', 'D. 计算公式'],
     type: 'radio',
   },
-  {
-    topic: '电子表格的计算公式支持以下哪种计算？ ',
-    answer: 'ABCD',
-    answer_arr: ['A. 占比', 'B. 同期值', 'C. 环比', 'D. 排名'],
-    type: 'radio',
-  },
+
   {
     topic:
       '关系数据源中存在同步表操作，可以帮助异地用户同步变更本地的数据，以下关于同步表的说法错误的是?',
@@ -2545,12 +2455,7 @@ export const dataJson = [
     answer_arr: [],
     type: 'determine',
   },
-  {
-    topic: '在SQL数据集输入SQL后，在数据库执行的SQL与我们输入的是一致的 ',
-    answer: '错误',
-    answer_arr: [],
-    type: 'determine',
-  },
+
   {
     topic: '业务主题我们可以看作是 Smartbi 产品中的数据仓库 ',
     answer: '正确',
@@ -3036,12 +2941,7 @@ export const dataJson = [
     answer_arr: [],
     type: 'determine',
   },
-  {
-    topic: '在SQL数据集输入SQL后，在数据库执行的SQL与我们输入的是一致的',
-    answer: '错误',
-    answer_arr: [],
-    type: 'determine',
-  },
+
   {
     topic: '电子表格只支持配置表间跳转，不支持表内的数据联动。',
     answer: '错误',
@@ -3245,13 +3145,7 @@ export const dataJson = [
     answer_arr: ['A.二维码', 'B.图片', 'C.文件', 'D.以上都支持'],
     type: 'radio',
   },
-  {
-    topic:
-      '某用户想要使用电子表格实现清单明细报表展现，并且数据量非常大，推荐此用户使用什么类型报表进行实现？',
-    answer: 'B',
-    answer_arr: ['A.分组表', 'B.清单表', 'C.列表报表', 'D.Excel融合分析'],
-    type: 'radio',
-  },
+
   {
     topic:
       '[color=#34495e][font="]拖拽式数据集中哪一个数据集是用来满足[/font][/color][color=#34495e][font="]在业务中明细数据的查询需要？[/font][/color]',
@@ -3342,12 +3236,7 @@ export const dataJson = [
     answer_arr: ['A.列表', 'B.分组', 'C.汇总', 'D.随机'],
     type: 'radio',
   },
-  {
-    topic: '以下哪个不属于电子表格单元格属性中的扩展方向？',
-    answer: 'C',
-    answer_arr: ['A.从上到下', 'B.从左到右', 'C.扩展', 'D.不扩展'],
-    type: 'radio',
-  },
+
   {
     topic: '电子表格如果想实现维内排名，需要用到的公式类型是？',
     answer: 'C',
@@ -3359,18 +3248,7 @@ export const dataJson = [
     ],
     type: 'radio',
   },
-  {
-    topic:
-      '电子表格中为了让标题行在分页之后的每一页都还可以继续显示，通常的做法是？',
-    answer: 'C',
-    answer_arr: [
-      'A.设置冻结窗格',
-      'B.设置单元格属性',
-      'C.设置打印标题',
-      'D.设置条件格式',
-    ],
-    type: 'radio',
-  },
+
   {
     topic: '电子表格设置在电脑端自适应大小的类型中，不包含以下哪个设置？',
     answer: 'D',
@@ -3810,7 +3688,7 @@ export const dataJson = [
   },
   {
     topic:
-      '.透视分析中，当业务数据集的原始维度和度量并不能满足数据分析的需求时，可以使用“计算列”功能对数据进行加工处理。',
+      '透视分析中，当业务数据集的原始维度和度量并不能满足数据分析的需求时，可以使用“计算列”功能对数据进行加工处理。',
     answer: '正确',
     answer_arr: [],
     type: 'determine',
@@ -3880,7 +3758,7 @@ export const dataJson = [
     type: 'radio',
   },
   {
-    topic: '.数据模型的能力是？ ',
+    topic: '数据模型的能力是？ ',
     answer: 'D',
     answer_arr: [
       'A. 一体化建模能力，多种“表” 类型',
@@ -3992,7 +3870,7 @@ export const dataJson = [
   },
   {
     topic:
-      '.交互式仪表盘的条件格式是用于实现告警的功能，具体使用是通过对字段设置规则实现的，以下关于支持条件格式的字段说法正确的是？',
+      '交互式仪表盘的条件格式是用于实现告警的功能，具体使用是通过对字段设置规则实现的，以下关于支持条件格式的字段说法正确的是？',
     answer: 'C',
     answer_arr: [
       'A. 只支持维度字段',
@@ -4091,7 +3969,7 @@ export const dataJson = [
   },
   {
     topic:
-      '.数据模型提供强大的计算能力，当数据库表的维度、度量数据不足以支撑我们进行分析时，我们可以通过自定义计算得到我们需要的数据，以下哪些是数据模型提供的自定义计算功能？',
+      '数据模型提供强大的计算能力，当数据库表的维度、度量数据不足以支撑我们进行分析时，我们可以通过自定义计算得到我们需要的数据，以下哪些是数据模型提供的自定义计算功能？',
     answer: 'ABCD',
     answer_arr: [
       'A. 新建分组字段',
@@ -4102,8 +3980,7 @@ export const dataJson = [
     type: 'radio',
   },
   {
-    topic:
-      '如果柱图的柱子数量太多，可以使用什么方式提高图形的可看性？ (3.0分)',
+    topic: '如果柱图的柱子数量太多，可以使用什么方式提高图形的可看性？ (3.0分)',
     answer: 'ABC',
     answer_arr: [
       'A. 增加缩略轴',
@@ -4179,7 +4056,7 @@ export const dataJson = [
     type: 'radio',
   },
   {
-    topic: '.SWOT分析方法是从哪四象限进行分析？ ',
+    topic: 'SWOT分析方法是从哪四象限进行分析？ ',
     answer: 'ABCE',
     answer_arr: [
       'A. 优势',
@@ -4249,7 +4126,7 @@ export const dataJson = [
     type: 'determine',
   },
   {
-    topic: '.交互式仪表盘支持以组件或者字段作为筛选器',
+    topic: '交互式仪表盘支持以组件或者字段作为筛选器',
     answer: '正确',
     answer_arr: [],
     type: 'determine',
@@ -4325,7 +4202,7 @@ export const dataJson = [
   },
   {
     topic:
-      '.业务人员存在一些线下数据需要合并分析，在数据模型中可以使用什么子查询进行模型的构建？',
+      '业务人员存在一些线下数据需要合并分析，在数据模型中可以使用什么子查询进行模型的构建？',
     answer: 'A',
     answer_arr: [
       'A. 导入文件',
@@ -4431,7 +4308,7 @@ export const dataJson = [
     type: 'radio',
   },
   {
-    topic: '.在即席查询中，可以将度量字段的数据格式改为什么类型？ ',
+    topic: '在即席查询中，可以将度量字段的数据格式改为什么类型？ ',
     answer: 'D',
     answer_arr: ['A. 整型', 'B. 浮点型', 'C. 百分比', 'D. 以上都是'],
     type: 'radio',
@@ -4494,7 +4371,7 @@ export const dataJson = [
     answer: 'BD',
     answer_arr: [
       'A. 关系数据源不允许存在多个Schema',
-      '    B. 执行同步Schema后，会把此Schema下的所有表都会添加进来  ',
+      'B. 执行同步Schema后，会把此Schema下的所有表都会添加进来  ',
       'C. 系统不支持关系数据源修改Schema名称',
       'D. 连接MySQL数据库后，默认的Schema名称为DEFAULT',
     ],
@@ -4534,7 +4411,7 @@ export const dataJson = [
     type: 'radio',
   },
   {
-    topic: '.数据模型中，直连只支持哪些子查询？ ',
+    topic: '数据模型中，直连只支持哪些子查询？ ',
     answer: 'ABC',
     answer_arr: [
       'A. SQL查询',
@@ -4628,7 +4505,7 @@ export const dataJson = [
     type: 'radio',
   },
   {
-    topic: '.在BI平台中，实现未分组统计表，可通过哪些工具实现？ ',
+    topic: '在BI平台中，实现未分组统计表，可通过哪些工具实现？ ',
     answer: 'BCD',
     answer_arr: [
       'A. 透视分析',
@@ -4697,14 +4574,13 @@ export const dataJson = [
   },
   {
     topic:
-      '.即席查询只能实现字符串类型数据设置告警，不能实现数值类型数据设置告警。',
+      '即席查询只能实现字符串类型数据设置告警，不能实现数值类型数据设置告警。',
     answer: '错误',
     answer_arr: [],
     type: 'determine',
   },
   {
-    topic:
-      '透视分析上创建的分组字段属于报表私有，不能和其它报表共用。 (1.0分)',
+    topic: '透视分析上创建的分组字段属于报表私有，不能和其它报表共用。 (1.0分)',
     answer: '正确',
     answer_arr: [],
     type: 'determine',
@@ -4737,8 +4613,7 @@ export const dataJson = [
     type: 'determine',
   },
   {
-    topic:
-      '连接关系数据源时，在连接配置界面需要对连接的字符串进行什么修改？',
+    topic: '连接关系数据源时，在连接配置界面需要对连接的字符串进行什么修改？',
     answer: 'D',
     answer_arr: [
       'A. 数据库ip',
@@ -4773,7 +4648,7 @@ export const dataJson = [
     type: 'radio',
   },
   {
-    topic: '.数据模型的创建步骤是什么？ ',
+    topic: '数据模型的创建步骤是什么？ ',
     answer: 'C',
     answer_arr: [
       'A. 创建私有查询-构建模型',
@@ -4870,7 +4745,7 @@ export const dataJson = [
     type: 'radio',
   },
   {
-    topic: '.透视分析中，新建分组字段时，“分组设置”有几种方式？ ',
+    topic: '透视分析中，新建分组字段时，“分组设置”有几种方式？ ',
     answer: 'D',
     answer_arr: [
       'A. 添加分组',
@@ -4963,7 +4838,7 @@ export const dataJson = [
     type: 'radio',
   },
   {
-    topic: '.数据模型的数据源表不支持哪些数据库类型？ ',
+    topic: '数据模型的数据源表不支持哪些数据库类型？ ',
     answer: 'BC',
     answer_arr: [
       'A. 关系数据库',
@@ -4986,8 +4861,7 @@ export const dataJson = [
     type: 'radio',
   },
   {
-    topic:
-      '即席查询支持将报表结果进行导出，导出的文件格式可以选择哪些类型？',
+    topic: '即席查询支持将报表结果进行导出，导出的文件格式可以选择哪些类型？',
     answer: 'BC',
     answer_arr: ['A. TXT', 'B. CSV', 'C. EXCEL', 'D. PDF'],
     type: 'radio',
@@ -5046,7 +4920,7 @@ export const dataJson = [
     type: 'radio',
   },
   {
-    topic: '.在数据分析中，用于查看序列数据或趋势数据的图形类型可选择哪些？',
+    topic: '在数据分析中，用于查看序列数据或趋势数据的图形类型可选择哪些？',
     answer: 'ABCD',
     answer_arr: ['A. 线图', 'B. 面积图', 'C. 柱图', 'D. 漏斗图'],
     type: 'radio',
@@ -5110,7 +4984,7 @@ export const dataJson = [
   },
   {
     topic:
-      '.在透视分析中，可以修改普通度量字段的汇总依据，当修改其汇总依据时系统会自动替换原有字段的汇总依据。',
+      '在透视分析中，可以修改普通度量字段的汇总依据，当修改其汇总依据时系统会自动替换原有字段的汇总依据。',
     answer: '错误',
     answer_arr: [],
     type: 'determine',
@@ -5160,8 +5034,7 @@ export const dataJson = [
     type: 'radio',
   },
   {
-    topic:
-      '连接关系数据源时，在连接配置界面需要对连接的字符串进行什么修改？',
+    topic: '连接关系数据源时，在连接配置界面需要对连接的字符串进行什么修改？',
     answer: 'D',
     answer_arr: [
       'A. 数据库ip',
@@ -5196,7 +5069,7 @@ export const dataJson = [
   },
   {
     topic:
-      '.业务需要分析数据，但相关数据分散在不同地方，以不同形式存在，可以使用什么功能来解决？',
+      '业务需要分析数据，但相关数据分散在不同地方，以不同形式存在，可以使用什么功能来解决？',
     answer: 'B',
     answer_arr: ['A. 业务主题', 'B. 数据模型', 'C. 自助ETL', 'D. 指标模型'],
     type: 'radio',
@@ -5290,7 +5163,7 @@ export const dataJson = [
   },
   {
     topic:
-      '.交互式仪表盘中数据太多如柱子展现太多，如何设置来实现自由调整显示区域，使数据查看更清晰、更灵活？',
+      '交互式仪表盘中数据太多如柱子展现太多，如何设置来实现自由调整显示区域，使数据查看更清晰、更灵活？',
     answer: 'B',
     answer_arr: ['A. Tab页', 'B. 缩略轴', 'C. 输出行设置', 'D. 排序设置'],
     type: 'radio',
@@ -5389,7 +5262,7 @@ export const dataJson = [
     type: 'radio',
   },
   {
-    topic: '.数据模型中，直连只支持哪些子查询？ ',
+    topic: '数据模型中，直连只支持哪些子查询？ ',
     answer: 'ABC',
     answer_arr: [
       'A. SQL查询',
@@ -5480,17 +5353,829 @@ export const dataJson = [
     type: 'radio',
   },
   {
-    topic:
-      '即席查询支持将报表结果进行导出，导出的文件格式可以选择哪些类型？',
+    topic: '即席查询支持将报表结果进行导出，导出的文件格式可以选择哪些类型？',
     answer: 'BC',
     answer_arr: ['A. TXT', 'B. CSV', 'C. EXCEL', 'D. PDF'],
     type: 'radio',
   },
   {
     topic:
-      '.狭义的统计表是指将收集来的统计数据经过汇总整理，并按一定顺序排列在相应的表格内而形成，在内容上，统计表由哪些部分组成？',
+      '狭义的统计表是指将收集来的统计数据经过汇总整理，并按一定顺序排列在相应的表格内而形成，在内容上，统计表由哪些部分组成？',
     answer: 'CD',
     answer_arr: ['A. 标题', 'B. 数据', 'C. 主词', 'D. 宾词'],
+    type: 'radio',
+  },
+
+  {
+    topic: '在关系数据源进行数据库管理时，只能添加表资源到数据源下 ',
+    answer: '错误',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic:
+      '在开发电子表格过程中，设置动态字段的单元格属性入口只有一个，只能从工具栏点击进入编辑。',
+    answer: '错误',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic: '在原生SQL数据集输入SQL后，系统会自动从连接的数据库中读取输出字段',
+    answer: '错误',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic:
+      '[color=#34495e][font="]代码式数据集包括 SQL 数据集、原生 SQL数据集、存储过程数据集和 Java数据集，主要面向技术人员，通过直接编写查询语句和代码的方式完成数据准备，成为可用的制作报表的“原材料”。[/font][/color]',
+    answer: '正确',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic: '电子表格中的数据设置包含3种，分别为分组、列表以及汇总。 ',
+    answer: '正确',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic: '电子表格可以基于透视分析数据集创建 ',
+    answer: '正确',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic: '电子表格可以通过引用参数在某个单元格上获取对应参数的显示值 (1.0分)',
+    answer: '正确',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic:
+      '[color=#34495e]拖拽式数据集包括即席查询数据集和透视分析数据集，主要面向不懂代码的业务人员，通过点击/拖放的方式完成明细数据或汇总数据准备，成为可用的制作报表的“原材料”[/color]',
+    answer: '正确',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic: '电子表格报表的数据来源有很多种途径，但不能直接基于数据源创建。',
+    answer: '错误',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic:
+      '在同个电子表格报表中使用多个数据集，可以通过在单元格属性中设置过滤进行字段关联。',
+    answer: '正确',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic:
+      '业务主题一旦创建了不允许删除已存在的业务属性，因为会影响到数据源的使用',
+    answer: '错误',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic: '2.使用原生SQL数据集的话，可以不用定义数据源的表关系视图 ',
+    answer: '正确',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic:
+      '3.电子表格中的清单报表不能自定义每页显示多少行数据，分组报表可以自定义。',
+    answer: '错误',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic:
+      '4.电子表格的公式包含了Excel公式和电子表格公式，并且两者可以结合使用，如应用到前期值、环比的计算。',
+    answer: '正确',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic:
+      '5.创建关系数据源后，必须在关系数据源下创建表关系视图，不然无法正常创建查询取数。',
+    answer: '错误',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic:
+      '6.电子表格支持使用Excel条件格式的功能，实现数据的阈值告警，比如设置大于5000的销售额高亮显示。',
+    answer: '正确',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic: '7.系统支持Oracle、Teradata、MySQL等数据库表和字段的注释作为别名',
+    answer: '正确',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic:
+      '8.电子表格中的Tab页控件可以达到在同一sheet页中查看多张报表或者图形的效果',
+    answer: '正确',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic: '电子表格不仅支持固定排序，还支持设置点击列头动态排序。 ',
+    answer: '正确',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic: '业务主题可以对表字段进行自由组合，分级分层，更加便于查询拖拽',
+    answer: '正确',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic:
+      '在电子表格插入按钮控件后，可以通过“指定宏”来设置按钮的功能为刷新报表。',
+    answer: '正确',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic:
+      '关系数据源只能单表同步，不能批量同步表，因为批量同步会导致系统卡顿。',
+    answer: '错误',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic: '3.在SQL数据集输入SQL后，在数据库执行的SQL与我们输入的是一致的',
+    answer: '错误',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic:
+      '4.制作填报报表的前提是数据库中需要有一张可以进行补录的表，且该表拥有本次补录的所有字段。',
+    answer: '正确',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic:
+      '5.通过数据连接的功能连接到拥有这张补录表的数据库即可，不需要将该表添加到Smartbi平台中也可以进行使用。',
+    answer: '错误',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic: '6.填报报表只能进行数据补录，不能进行数据修改或删除。 ',
+    answer: '错误',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic:
+      '7.在开发报表前，需要根据业务需求的数据要求，整理出口径不清晰的与财务会计进行沟通并确认口径。',
+    answer: '正确',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic: '8.连接到数据之后可以直接拿数据源表的数据进行制作报表。 ',
+    answer: '错误',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic:
+      '使用Smartbi时，当出现功能不知道如何使用的问题时，可以使用wiki文档来了解功能如何使用。',
+    answer: '正确',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic: '报表导出成 Excel后数值显示成科学计数法是受Smartbi的影响。 (1.0分)',
+    answer: '错误',
+    answer_arr: [],
+    type: 'determine',
+  },
+  {
+    topic: '以下关于关系数据库的计算字段描述错误的是 ',
+    answer: 'D',
+    answer_arr: [
+      'A. 计算字段是指四则运算或是函数等书写表达式形成的新字段',
+      'B. 此字段可用于创建业务主题、可视化数据集和即席查询',
+      'C. 计算字段通常使用计算表达式或SQL表达式获取结果集',
+      'D.创建之后该字段也会存在与对应数据库中，可在数据库中找到该字段',
+    ],
+    type: 'radio',
+  },
+  {
+    topic: '电子表格字段的格式设置中，支持以下哪种显示方式？ ',
+    answer: 'D',
+    answer_arr: ['A. 二维码', 'B. 图片', 'C. 文件', 'D. 以上都支持'],
+    type: 'radio',
+  },
+  {
+    topic: '以下哪个不是配置电子表格服务器设置的配置项？ ',
+    answer: 'B',
+    answer_arr: ['A. 服务器URL', 'B. 验证码', 'C. 用户名', 'D. 密码'],
+    type: 'radio',
+  },
+  {
+    topic: '4.电子表格支持使用各种控件，下方哪种控件可以实现打开外部网页?',
+    answer: 'D',
+    answer_arr: ['A. 跑马灯控件', 'B. 按钮', 'C. tab控件', 'D. url控件'],
+    type: 'radio',
+  },
+  {
+    topic: '5.电子表格设置在电脑端自适应大小的类型中，不包含以下哪个设置？',
+    answer: 'D',
+    answer_arr: ['A. 自适应', 'B. 仅放大', 'C. 仅缩小', 'D. 先放大后缩小'],
+    type: 'radio',
+  },
+  {
+    topic:
+      '6.[color=#34495e][font="]业务人员不懂技术，但又需要从清单数据中筛选出报表所需的汇总数据结果，可以使用什么数据集来快速实现？[/font][/color]',
+    answer: 'B',
+    answer_arr: [
+      'A. 即席查询数据集',
+      'B. 透视分析数据集',
+      'C. 原生SQL数据集',
+      'D. SQL数据集',
+    ],
+    type: 'radio',
+  },
+  {
+    topic:
+      '7.电子表格数据设置中，哪个设置项可以将数据列中相同内容的值进行合并？',
+    answer: 'A',
+    answer_arr: ['A. 分组', 'B. 列表', 'C. 汇总', 'D. 合并'],
+    type: 'radio',
+  },
+  {
+    topic:
+      '8.电子表格报表中，如果想定义某一列的值超过预警值时，使其对应的单元格高亮显示的话，可以使用什么功能实现？',
+    answer: 'B',
+    answer_arr: ['A. 告警规则', 'B. 条件格式', 'C. 传值', 'D. 跳转规则'],
+    type: 'radio',
+  },
+  {
+    topic: '以下哪个数据库不是关系数据库可以直接选择连接的？ ',
+    answer: 'D',
+    answer_arr: ['A. MySQL', 'B. MS SQL SERVER', 'C. Oracle', 'D. Tinysoft'],
+    type: 'radio',
+  },
+  {
+    topic:
+      '[color=#34495e][font="]拖拽式数据集中哪一个数据集是用来满足[/font][/color][color=#34495e][font="]在业务中明细数据的查询需要？[/font][/color]',
+    answer: 'A',
+    answer_arr: [
+      'A. 即席查询数据集',
+      'B. 透视分析数据集',
+      'C. SQL数据集',
+      'D. 原生SQL数据集',
+    ],
+    type: 'radio',
+  },
+  {
+    topic: '电子表格单元格属性不包含以下哪一项？ ',
+    answer: 'D',
+    answer_arr: ['A. 过滤', 'B. 扩展', 'C. 附属', 'D. 图形设置'],
+    type: 'radio',
+  },
+  {
+    topic: '电子表格切换参数刷新设置不包含以下哪个设置？ ',
+    answer: 'D',
+    answer_arr: [
+      'A. 自动刷新',
+      'B. 手动刷新',
+      'C. 局部刷新',
+      'D. 打开只刷表样',
+    ],
+    type: 'radio',
+  },
+  {
+    topic: '电子表格拖拽一个字段到表格上，默认的数据设置是？ ',
+    answer: 'B',
+    answer_arr: ['A. 列表', 'B. 分组', 'C. 汇总', 'D. 随机'],
+    type: 'radio',
+  },
+  {
+    topic:
+      '电子表格可以结合条件格式的功能来丰富报表的展示效果，以下说法正确的是？',
+    answer: 'D',
+    answer_arr: [
+      'A. 可以在同个单元格上使用文本高亮显示及图标集显示',
+      'B. 可以使用条件格式在报表实现组内排名前40%告警',
+      'C. 可以使用条件格式在报表添加间隔色效果',
+      'D. 以上都可以',
+    ],
+    type: 'radio',
+  },
+  {
+    topic:
+      '5.某用户想要使用电子表格实现清单明细报表展现，并且数据量非常大，推荐此用户使用什么类型报表进行实现？',
+    answer: 'B',
+    answer_arr: ['A. 分组表', 'B. 清单表', 'C. 列表报表', 'D. Excel融合分析'],
+    type: 'radio',
+  },
+  {
+    topic: '6.在电子表格中拖拽一个字段到表格上，默认的扩展方向是？ ',
+    answer: 'B',
+    answer_arr: ['A. 从左到右', 'B. 从上到下', 'C. 不扩展', 'D. 随机'],
+    type: 'radio',
+  },
+  {
+    topic: '7.电子表格设计器中，关于回写的设置选项不包含以下哪一项？ ',
+    answer: 'D',
+    answer_arr: ['A. 回写规则', 'B. 填报属性', 'C. 填报列表', 'D. 清空回写'],
+    type: 'radio',
+  },
+  {
+    topic:
+      '8.电子表格中为了让标题行在分页之后的每一页都还可以继续显示，通常的做法是？',
+    answer: 'C',
+    answer_arr: [
+      'A. 设置冻结窗格',
+      'B. 设置单元格属性',
+      'C. 设置打印标题',
+      'D. 设置条件格式',
+    ],
+    type: 'radio',
+  },
+  {
+    topic: '以下哪个不属于电子表格单元格属性中的数据设置？ ',
+    answer: 'B',
+    answer_arr: ['A. 分组', 'B. 空值处理', 'C. 列表', 'D. 汇总'],
+    type: 'radio',
+  },
+  {
+    topic:
+      '关系数据源的表关系视图中存在多个快捷操作按钮，以便于我们快速进行表关系设置，以下哪个不属于表关系视图中的操作按钮？',
+    answer: 'D',
+    answer_arr: [
+      'A. 按别名自动建关系',
+      'B. 按列名自动建关系',
+      'C. 按外键自动建关系',
+      'D. 按描述自动建关系',
+    ],
+    type: 'radio',
+  },
+  {
+    topic: '配置关系数据源的数据库管理时，不可以添加以下什么资源？ ',
+    answer: 'D',
+    answer_arr: ['A. 表', 'B. 视图', 'C. 存储过程', 'D. 触发器'],
+    type: 'radio',
+  },
+  {
+    topic: '以下哪个不属于电子表格单元格属性中的扩展方向？ ',
+    answer: 'C',
+    answer_arr: ['A. 从上到下', 'B. 从左到右', 'C. 扩展', 'D. 不扩展'],
+    type: 'radio',
+  },
+  {
+    topic: '以下哪个不是电子表格“单元格属性-过滤”中的设置类型？ ',
+    answer: 'C',
+    answer_arr: ['A. 值', 'B. 数据列', 'C. 单元格', 'D. 参数'],
+    type: 'radio',
+  },
+  {
+    topic: '电子表格如果想实现维内排名，需要用到的公式类型是？ ',
+    answer: 'C',
+    answer_arr: [
+      'A. 电子表格公式',
+      'B. EXCEL公式',
+      'C. 电子表格公式+EXCEL公式',
+      'D. 系统配置',
+    ],
+    type: 'radio',
+  },
+  {
+    topic:
+      '某用户想要实现小计合计报表，将数据进行分组汇总展示，推荐此用户使用什么类型的报表',
+    answer: 'A',
+    answer_arr: ['A. 分组表', 'B. 清单表', 'C. 列表报表', 'D. Excel融合分析'],
+    type: 'radio',
+  },
+  {
+    topic:
+      '6.某个电子表格报表引用了多个数据集字段，需要快速知道某个字段来源于哪个数据集，并定位到该数据集上时，可以使用以下哪个功能？',
+    answer: 'B',
+    answer_arr: [
+      'A. 单元格属性',
+      'B. 定位数据集',
+      'C. 页面设置',
+      'D. 字段搜索',
+    ],
+    type: 'radio',
+  },
+  {
+    topic: '7.关于电子表格的描述，以下说法错误的是？ ',
+    answer: 'B',
+    answer_arr: [
+      'A. 电子表格纯清单报表支持分页',
+      'B. 电子表格不支持在移动端浏览',
+      'C. 电子表格可以检查更新插件版本',
+      'D. 电子表格可以批量插入字段',
+    ],
+    type: 'radio',
+  },
+  {
+    topic: '8.关于电子表格，以下说法正确的是？ ',
+    answer: 'D',
+    answer_arr: [
+      'A. 电子表格支持点击列头动态排序',
+      'B. 电子表格支持设置维内固定升序',
+      'C. 不能在汇总单元格上面设置固定排序',
+      'D. 以上说法均正确',
+    ],
+    type: 'radio',
+  },
+  {
+    topic:
+      '在制作报表之前，需要先把数据准备好，本次需要的是明细数据，且该人员不懂技术，那么选择哪个功能去进行数据准备对于该人员来说是最方便快捷的？',
+    answer: 'B',
+    answer_arr: [
+      'A. 原生SQL数据集',
+      'B. 即席查询数据集',
+      'C. 透视分析数据集',
+      'D. 业务主题',
+    ],
+    type: 'radio',
+  },
+  {
+    topic:
+      '设计完表样并将字段拖拽到对应的单元格，发布后发现还是不能对单元格进行编辑，只能查看数据，这是因为缺少了什么设置？',
+    answer: 'C',
+    answer_arr: ['A. 回写规则', 'B. 参数设置', 'C. 填报属性', 'D. 单元格属性'],
+    type: 'radio',
+  },
+  {
+    topic:
+      '当需要填报的数据很多时，一个一个填写效率太低，有没有什么方法能够实现批量导入数据？',
+    answer: 'D',
+    answer_arr: [
+      'A. 在填报属性里勾选允许批量导入',
+      'B. 在单元格属性里勾选允许批量导入',
+      'C. 在页面设置里勾选允许批量导入',
+      'D. 在回写规则设置里勾选允许批量导入',
+    ],
+    type: 'radio',
+  },
+  {
+    topic:
+      '销售在使用该报表进行填报时，修改了数据并且进行了保存，但是一刷新发现数据还是原来的，并没有修改成功，原因是什么？',
+    answer: 'A',
+    answer_arr: [
+      'A. 没有设置回写规则让填报单元格与数据库表字段进行绑定',
+      'B. 没有设置填报属性让填报单元格与数据库表字段进行绑定',
+      'C. 没有设置单元格属性让填报单元格与数据库表字段进行绑定',
+      'D. 以上都是',
+    ],
+    type: 'radio',
+  },
+  {
+    topic: '制作两账一表报表时，对于数据类字段，通常会做什么操作？ ',
+    answer: 'D',
+    answer_arr: [
+      'A. 数据设置修改为列表，汇总方式为计数',
+      'B. 数据设置修改为分组，汇总方式为求和',
+      'C. 数据设置修改为汇总，汇总方式为计数',
+      'D. 数据设置修改为汇总，汇总方式为求和',
+    ],
+    type: 'radio',
+  },
+  {
+    topic:
+      '制作科目余额表时需要添加月份作为筛选条件，推荐使用什么控件进行展示？',
+    answer: 'C',
+    answer_arr: ['A. 单选', 'B. 复选', 'C. 日期', 'D. 轮播'],
+    type: 'radio',
+  },
+  {
+    topic:
+      '当我们在科目余额表中筛选出2022年10月份的数据后，想要查看该月份下某个科目的账簿时，我们可以点击“科目名称”来联查到总账表，此时需要设置什么字段作为传参值？',
+    answer: 'C',
+    answer_arr: [
+      'A. 月份',
+      'B. 科目名称',
+      'C. 月份和科目名称',
+      'D. 以上都可以',
+    ],
+    type: 'radio',
+  },
+  {
+    topic:
+      '当出现一些报错类问题时，想要先自行解决，可以通过什么途径查找解决方法？',
+    answer: 'B',
+    answer_arr: ['A. wiki文档', 'B. FAQ中心', 'C. 麦粉社区', 'D. 以上都不是'],
+    type: 'radio',
+  },
+  {
+    topic:
+      '7.通常在遇到报表慢或者系统的一些问题时，需要记录前后端通信等信息进行跟踪处理，可以通过什么日志获取到相关信息？',
+    answer: 'A',
+    answer_arr: ['A. 用户日志', 'B. 系统日志', 'C. 操作日志', 'D. 服务器日志'],
+    type: 'radio',
+  },
+  {
+    topic:
+      '8.管理员想要知道用户在平台中做了什么操作，可以通过什么日志获取到相关信息？',
+    answer: 'C',
+    answer_arr: ['A. 用户日志', 'B. 系统日志', 'C. 操作日志', 'D. 服务器日志'],
+    type: 'radio',
+  },
+  {
+    topic:
+      '当在使用产品时遇到服务器、数据库等报错时，想要了解系统的运行情况，如：启动信息、报错信息，进行问题的监控及跟进，可以通过什么日志获取到相关信息？',
+    answer: 'B',
+    answer_arr: ['A. 用户日志', 'B. 系统日志', 'C. 操作日志', 'D. 服务器日志'],
+    type: 'radio',
+  },
+  {
+    topic: '在使用产品出现报错时，怎么根据报错原因找到解决方法？ ',
+    answer: 'D',
+    answer_arr: [
+      'A. 查看堆栈信息，找到Caused by的部分，复制后在FAQ文档上进行搜索查找解决方法',
+      'B. 导出系统日志，找到Caused by的部分，复制后在FAQ文档上进行搜索查找解决方法',
+      'C.将系统日志、报错资源、现象截图等内容发给Smartbi官方寻找解决方法',
+      'D. 以上都可以',
+    ],
+    type: 'radio',
+  },
+  {
+    topic:
+      '想要重装Smartbi环境，重装后原先环境中的报表可以怎么去进行复原？（单选题）',
+    answer: 'A',
+    answer_arr: [
+      'A.重装前先通过“备份知识库”来备份资源，重装后通过“恢复知识库”来恢复相应的资源',
+      'B.重装前通过“导出资源”功能来备份资源，重装后通过“恢复知识库”来恢复相应的资源',
+      'C.重装前通过“备份知识库”功能来备份资源，重装后通过“导入资源”来恢复相应的资源',
+      'D. 以上都不行',
+    ],
+    type: 'radio',
+  },
+  {
+    topic: '电子表格字段的扩展方向包含下面哪些？ ',
+    answer: 'ABC',
+    answer_arr: ['A. 从左到右', 'B. 从上到下', 'C. 不扩展', 'D. 全面扩展'],
+    type: 'radio',
+  },
+  {
+    topic: '电子表格提供了字段的父格设置，以下哪些是父格配置中的选项？ (1.0分)',
+    answer: 'AD',
+    answer_arr: ['A. 左父格', 'B. 前父格', 'C. 下父格', 'D. 上父格'],
+    type: 'radio',
+  },
+  {
+    topic: '电子表格通过参数排版的功能可以实现哪些效果？ ',
+    answer: 'ABC',
+    answer_arr: [
+      'A. 调整参数在参数面板中的显示位置',
+      'B. 将参数在参数面板中隐藏',
+      'C. 将参数绑定在某个单元格上',
+      'D. 将参数在报表中删除',
+    ],
+    type: 'radio',
+  },
+  {
+    topic: '电子表格的计算公式支持以下哪种计算？ ',
+    answer: 'ABCD',
+    answer_arr: ['A. 占比', 'B. 同期值', 'C. 环比', 'D. 排名'],
+    type: 'radio',
+  },
+  {
+    topic: '电子表格在字段的单元格属性中，支持的分页属性包含哪些？ ',
+    answer: 'ABCD',
+    answer_arr: ['A. 行前分页', 'B. 行后分页', 'C. 列前分页', 'D. 列后分页'],
+    type: 'radio',
+  },
+  {
+    topic: '7.电子表格支持制作以下哪些图形？ ',
+    answer: 'ABCD',
+    answer_arr: ['A. 双Y联合图', 'B. 雷达图', 'C. 手风琴图', 'D. 子弹图'],
+    type: 'radio',
+  },
+  {
+    topic: '8.电子表格预览时支持导出的种类有哪些？ ',
+    answer: 'BD',
+    answer_arr: ['A. HTML', 'B. WORD', 'C. JPG', 'D. PDF'],
+    type: 'radio',
+  },
+  {
+    topic:
+      '[color=#34495e][font="]Smartbi数据源支持连接的类型非常广泛，以下哪些类型是可以进行连接的？[/font][/color]',
+    answer: 'ABCD',
+    answer_arr: ['A. 文件', 'B. 关系数据库', 'C. NoSQL数据库', 'D. Java数据源'],
+    type: 'radio',
+  },
+  {
+    topic:
+      '关系数据源的表关系视图是指添加了表之后，设置这些表之间的主外键关联关系，以便实现跨表查询，那么以下哪个是表关系视图支持的连接关系？',
+    answer: 'ABCD',
+    answer_arr: ['A. 左连接', 'B. 右连接', 'C. 内连接', 'D. 全连接'],
+    type: 'radio',
+  },
+  {
+    topic: '电子表格在设计器中提供了参数设置的功能，包含了以下哪些配置项？',
+    answer: 'ABD',
+    answer_arr: ['A. 参数排版', 'B. 引用参数', 'C. 参数联动', 'D. 默认参数'],
+    type: 'radio',
+  },
+  {
+    topic: '电子表格支持的图形类型有哪些？ ',
+    answer: 'AC',
+    answer_arr: [
+      'A. Excel图形',
+      'B. highcharts图形',
+      'C. echarts图形',
+      'D. GIS图形',
+    ],
+    type: 'radio',
+  },
+  {
+    topic:
+      '电子表格支持制作多种多样的报表类型，以下哪些报表类型是电子表格支持的？',
+    answer: 'ABCD',
+    answer_arr: [
+      'A. 上下分片报表',
+      'B. 左右分片报表',
+      'C. 多sheet页报表',
+      'D. 纯清单报表',
+    ],
+    type: 'radio',
+  },
+  {
+    topic:
+      '某用户在电子表格制作了两个带有参数控制的echarts图形，下一步需要设置两个图形之间可以联动传参，可以使用以下什么功能实现？',
+    answer: 'AC',
+    answer_arr: ['A. 跳转规则', 'B. 条件格式', 'C. 传值', 'D. 计算公式'],
+    type: 'radio',
+  },
+  {
+    topic: 'Schema相关操作是指数据源Schema更多操作的一些功能操作，包含什么？',
+    answer: 'ABC',
+    answer_arr: [
+      'A. 同步Schema',
+      'B. 修改Schema名称',
+      'C. 删除',
+      'D. 新增Schema',
+    ],
+    type: 'radio',
+  },
+  {
+    topic:
+      '计算公式在电子表格中应用广泛，某用户需要拖拽字段制作一张维内排名报表，以下的哪种说法是正确的？',
+    answer: 'CD',
+    answer_arr: [
+      'A. 可以单独使用RANK()函数实现排名效果',
+      'B. 实现排名与父格设置无关',
+      'C. 可以使用RANK()函数与SSR_GetSubCells()函数实现维内排名',
+      'D. 用公式实现排名后可以与排序功能搭配使用',
+    ],
+    type: 'radio',
+  },
+  {
+    topic:
+      '电子表格可以结合条件格式的功能来丰富报表的展示效果，以下说法正确的是？',
+    answer: 'ABCD',
+    answer_arr: [
+      'A. 可以使用条件格式在报表中添加增长趋势图标',
+      'B. 可以使用条件格式在报表实现组内排名前40%告警',
+      'C. 可以使用条件格式在报表添加间隔色效果',
+      'D. 可以在同个单元格上使用文本高亮显示及图标集显示',
+    ],
+    type: 'radio',
+  },
+  {
+    topic: '8.电子表格切换参数的刷新设置选项中，包含以下哪些？ ',
+    answer: 'BCD',
+    answer_arr: ['A. 不刷新', 'B. 自动刷新', 'C. 手动刷新', 'D. 局部刷新'],
+    type: 'radio',
+  },
+  {
+    topic: '如需自行写SQL实现查询的话，可以使用以下哪些数据集？ ',
+    answer: 'AB',
+    answer_arr: [
+      'A. 原生SQL数据集',
+      'B. SQL数据集',
+      'C. 存储过程数据集',
+      'D. Java数据集',
+    ],
+    type: 'radio',
+  },
+  {
+    topic: '电子表格单元格的扩展方式包含下面哪些选项？ ',
+    answer: 'AB',
+    answer_arr: [
+      'A. 插入单元格',
+      'B. 覆盖单元格',
+      'C. 填充单元格',
+      'D. 扩展单元格',
+    ],
+    type: 'radio',
+  },
+  {
+    topic: '电子表格可以基于哪些数据来源直接进行创建？ ',
+    answer: 'ABCD',
+    answer_arr: [
+      'A. 数据源表',
+      'B. 拖拽式数据集（即席查询、透视分析）',
+      'C. SQL数据集',
+      'D. 原生SQL数据集',
+    ],
+    type: 'radio',
+  },
+  {
+    topic: '关系数据源允许对Schema进行操作，以下哪些说法是正确的? ',
+    answer: 'AC',
+    answer_arr: [
+      'A. 执行同步Schema后，会把此Schema下的所有表都会添加进来',
+      'B. 系统不支持关系数据源修改Schema名称',
+      'C. 连接MySQL数据库后，默认的Schema名称为DEFAULT',
+      'D. 关系数据源不允许存在多个Schema',
+    ],
+    type: 'radio',
+  },
+  {
+    topic:
+      '关系数据源中存在同步表操作，可以帮助异地用户同步变更本地的数据，以下关于同步表的说法错误的是?',
+    answer: 'ACD',
+    answer_arr: [
+      'A. 同步数据表的方式只有单表同步',
+      'B. 同步表后，数据库表增加字段，对已经生成的资源无影响',
+      'C. 同步表后，表删除字段、修改字段，对已经生成的资源无影响',
+      'D. 同步表后，则对应的资源不可使用',
+    ],
+    type: 'radio',
+  },
+  {
+    topic: '电子表格字段格式的配置中，支持哪些显示格式的设置？ ',
+    answer: 'ABC',
+    answer_arr: ['A. 图片', 'B. 金额', 'C. 二维码', 'D. 条形码'],
+    type: 'radio',
+  },
+  {
+    topic: '电子表格的单元格属性设置汇总包含了扩展、附属，还有以下哪些？',
+    answer: 'ACD',
+    answer_arr: ['A. 过滤', 'B. 跨库', 'C. 其他', 'D. 分页'],
+    type: 'radio',
+  },
+  {
+    topic: '设置回写规则时，能够选择的回写内容类型有哪些？ ',
+    answer: 'AB',
+    answer_arr: [
+      'A. 回写修改内容',
+      'B. 回写所有内容',
+      'C. 回写新增内容',
+      'D. 回写删除内容',
+    ],
+    type: 'radio',
+  },
+  {
+    topic: '制作完成的填报报表，能够实现什么效果？ ',
+    answer: 'ABCD',
+    answer_arr: ['A. 查询数据', 'B. 修改数据', 'C. 增加数据', 'D. 删除数据'],
+    type: 'radio',
+  },
+  {
+    topic:
+      '因为展示的字段涉及到期初借方余额、本期借方发生额等字段，故需要在数据准备阶段对数据进行处理，此时推荐使用什么数据准备工具？',
+    answer: 'CD',
+    answer_arr: [
+      'A. 即席查询数据集',
+      'B. 透视分析数据集',
+      'C. SQL数据集',
+      'D. 原生SQL数据集',
+    ],
+    type: 'radio',
+  },
+  {
+    topic:
+      '报表制作完成进行预览时，出现“超出最大单元格个数”的提示，解决该问题的方法有哪些？',
+    answer: 'ABC',
+    answer_arr: [
+      'A.排除报表是否有隐藏的单元格和空的单元格被编辑过，或者将已编辑的内容区域复制（不要复制整个sheet区域）到新建的sheet页，再把之前的sheet页删除掉即可；',
+      'B.在系统选项中，调整报表最大单元格数，在内存充足的情况下，建议设置为实际的报表单元格数量*2',
+      'C. 在数据集中添加参数默认值进行限制，或者修改报表类型为清单表',
+      'D.根据设置的报表最大单元格数，去配置数据集单次查询的最大单元格数',
+    ],
+    type: 'radio',
+  },
+  {
+    topic:
+      '报表制作完成进行预览时，出现“查询结果集单元格超过了系统选项设置的内存数据库最大返回单元格数”的提示，解决该问题的方法有哪些？',
+    answer: 'CD',
+    answer_arr: [
+      'A.排除报表是否有隐藏的单元格和空的单元格被编辑过，或者将已编辑的内容区域复制（不要复制整个sheet区域）到新建的sheet页，再把之前的sheet页删除掉即可；',
+      'B.在系统选项中，调整报表最大单元格数，在内存充足的情况下，建议设置为实际的报表单元格数量*2',
+      'C. 在数据集中添加参数默认值进行限制',
+      'D.先确认报表最大单元格数是根据系统内存情况合理配置的，然后根据设置的报表最大单元格数，去配置数据集单次查询的最大单元格数',
+    ],
     type: 'radio',
   },
 ];

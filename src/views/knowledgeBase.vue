@@ -58,9 +58,8 @@ const searchBtn = () => {
     let filterData = data.value.filter((item) => {
       return item.topic.indexOf(searchValue.value) != -1;
     });
-    console.log(filterData, '***');
 
-    if (filterData.length > 0) showData.value = [filterData[0]];
+    if (filterData.length > 0) showData.value = filterData;
     if (filterData.length == 0) showData.value = [];
   } else {
     showData.value = data.value;
