@@ -99,6 +99,11 @@ const linkList = ref([
     type: 'external',
   },
   {
+    name: 'clipboard.js文档',
+    link: 'https://clipboardjs.com/#example-text',
+    type: 'external',
+  },
+  {
     name: '二维码生成器(本地)',
     link: '/qrcode',
     type: 'local',
@@ -108,6 +113,7 @@ const linkList = ref([
     link: '/excelTojson',
     type: 'local',
   },
+  
   // {
   //   name: '个人考证工具',
   //   link: '/knowledgeBase',
