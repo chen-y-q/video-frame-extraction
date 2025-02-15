@@ -186,6 +186,8 @@ onBeforeMount(() => {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  position: relative;
+  z-index: 99999;
 }
 .clock {
   font-size: 50px;
